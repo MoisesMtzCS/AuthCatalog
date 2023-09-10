@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".util.dialog.informative.InformativeDialogFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/image_size_s"
+        android:layout_height="@dimen/image_size_s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/vertical_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/alert_animation" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/double_lateral_margin"
+        android:layout_marginVertical="@dimen/small_vertical_margin"
+        android:gravity="center"
+        android:paddingVertical="@dimen/vertical_margin"
+        android:textSize="@dimen/text_size_l"
+        android:textStyle="bold"
+        tools:text="@tools:sample/lorem" />
+
+    <Button
+        android:id="@+id/button_accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="@dimen/vertical_margin"
+        android:layout_marginHorizontal="@dimen/lateral_margin"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/informative_dialog_accept"
+        android:textAllCaps="true" />
+
+</LinearLayout>

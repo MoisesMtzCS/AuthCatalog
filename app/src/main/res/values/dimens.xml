@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- IMAGE -->
+    <dimen name="image_size_xs">80dp</dimen>
+    <dimen name="image_size_s">100dp</dimen>
+    <dimen name="image_size_n">160dp</dimen>
+    <dimen name="image_size_l">200dp</dimen>
+    <dimen name="image_size_xl">250dp</dimen>
+    <dimen name="image_size_xxl">300dp</dimen>
+    <dimen name="image_size_login">500dp</dimen>
+
+    <!-- LATERAL -->
+    <dimen name="tiny_lateral_margin">2dp</dimen>
+    <dimen name="small_lateral_margin">4dp</dimen>
+    <dimen name="medium_lateral_margin">6dp</dimen>
+    <dimen name="half_lateral_margin">8dp</dimen>
+    <dimen name="lateral_margin">16dp</dimen>
+    <dimen name="double_lateral_margin">32dp</dimen>
+    <dimen name="triple_lateral_margin">48dp</dimen>
+
+    <!-- VERTICAL -->
+    <dimen name="tiny_vertical_margin">2dp</dimen>
+    <dimen name="small_vertical_margin">4dp</dimen>
+    <dimen name="half_vertical_margin">9dp</dimen>
+    <dimen name="lower_vertical_margin">12dp</dimen>
+    <dimen name="vertical_margin">18dp</dimen>
+    <dimen name="double_vertical_margin">36dp</dimen>
+    <dimen name="triple_vertical_margin">48dp</dimen>
+    <dimen name="dialog_width">280dp</dimen>
+
+
+
+</resources>
