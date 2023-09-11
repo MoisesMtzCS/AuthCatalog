@@ -12,6 +12,9 @@
     <string name="informative_dialog_accept">Aceptar</string>
     <!-- REGISTER CONTACT: FAILURE MESSAGE -->
     <string name="login_invalid_credentials_failure">Credenciales inválidas</string>
+    <string name="token_expired_failure">Su sesión ha expirado</string>
     <string name="login_network_connection_failure">Ocurrió un error. Por favor, revise su conexión a internet.</string>
     <string name="login_generic_failure">Ocurrió un error. Inténtalo de nuevo.</string>
+    <!-- PRODUCTS -->
+    <string name="product_price">$%sUS</string>
 </resources>

@@ -6,8 +6,8 @@ import androidx.fragment.app.FragmentActivity
 private val informativeDialogInstances: ArrayList<InformativeDialogFragment> = arrayListOf()
 
 /** Show the informative dialog with [message]. */
-fun FragmentActivity.showInformativeDialog(message: String? = null) {
-    val informativeDialogFragment = InformativeDialogFragment.newInstance(message)
+fun FragmentActivity.showInformativeDialog(message: String? = null, action: (() -> Unit)? = null) {
+    val informativeDialogFragment = InformativeDialogFragment.newInstance(message, action   )
     informativeDialogFragment.show(supportFragmentManager, null)
     informativeDialogInstances.add(informativeDialogFragment)
 }
