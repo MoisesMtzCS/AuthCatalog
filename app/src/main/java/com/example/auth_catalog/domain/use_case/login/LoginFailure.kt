@@ -2,7 +2,7 @@ package com.example.auth_catalog.domain.use_case.login
 
 import com.example.auth_catalog.util.clean.Failure
 
-/** Possible failures at load trips from the server. */
+/** Possible failures at login. */
 sealed class LoginFailure : Failure() {
 
     /** Internet connection failure. */

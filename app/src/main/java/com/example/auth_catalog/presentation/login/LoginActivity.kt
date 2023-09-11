@@ -50,6 +50,8 @@ class LoginActivity : AppCompatActivity() {
     /** Navigate to Main. */
     private fun navigateToMain() {
         val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
 
@@ -90,8 +92,10 @@ class LoginActivity : AppCompatActivity() {
         when (failure) {
             LoginFailure.GenericFailure ->
                 showInformativeDialog(getString(R.string.login_generic_failure))
+
             LoginFailure.NetworkConnectionFailure ->
                 showInformativeDialog(getString(R.string.login_network_connection_failure))
+
             LoginFailure.InvalidCredentials ->
                 showInformativeDialog(getString(R.string.login_invalid_credentials_failure))
         }

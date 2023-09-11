@@ -21,6 +21,9 @@ class InformativeDialogFragment : FullWidthDialogFragment() {
     /* Arguments required for current screen */
     private var message: String? = null
 
+    /* Action for ok button flow */
+    private var action: (() -> Unit)? = null
+
     /** Called at moment that the current screen is created. */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,9 +51,8 @@ class InformativeDialogFragment : FullWidthDialogFragment() {
 
     /** Setup the actions. */
     private fun setupActions() {
-        binding.buttonAccept.setOnClickListener { dismiss() }
+        binding.buttonAccept.setOnClickListener(::onOkActionClickListener)
     }
-
 
     /** Display the dialog, adding the fragment to the given FragmentManager. */
     override fun show(manager: FragmentManager, tag: String?) {
@@ -62,6 +64,12 @@ class InformativeDialogFragment : FullWidthDialogFragment() {
         }
     }
 
+    /** */
+    private fun onOkActionClickListener(view: View) {
+        action?.invoke()
+        dismiss()
+    }
+
     companion object {
 
         /* Key associated to message value */
@@ -70,11 +78,15 @@ class InformativeDialogFragment : FullWidthDialogFragment() {
         /**
          * Obtains a new instance of [InformativeDialogFragment] by [message] value.
          */
-        fun newInstance(message: String?): InformativeDialogFragment =
+        fun newInstance(
+            message: String?,
+            action: (() -> Unit)?,
+        ): InformativeDialogFragment =
             InformativeDialogFragment().apply {
                 arguments = Bundle().apply {
                     putString(MESSAGE_KEY, message)
                 }
+                this.action = action
             }
 
     }
